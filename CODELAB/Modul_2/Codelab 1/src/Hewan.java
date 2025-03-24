@@ -9,5 +9,5 @@ public class Hewan {
         System.out.println("\nNama : " + Nama);
         System.out.println("Jenis : " + Jenis);
         System.out.println("Suara : " + Suara);
-    }
+    };
 }
