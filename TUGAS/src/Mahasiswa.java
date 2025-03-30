@@ -1,23 +1,30 @@
+import java.util.Scanner;
+
 // Kelas Mahasiswa untuk menyimpan data login mahasiswa
-class Mahasiswa {
-    private final String nama;
-    private final String nim;
-
-    // Constructor
-    public Mahasiswa(String nama, String nim) {
-        this.nama = nama;
-        this.nim = nim;
+public class Mahasiswa extends User {
+    public Mahasiswa (String username, String password) {
+        super(username, password);
     }
 
-    // Method untuk login mahasiswa
-    public boolean login(String inputNama, String inputNim) {
-        return inputNama.equals(nama) && inputNim.equals(nim);
+    @Override
+    public void login() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan Nama: ");
+        String inputUsername = scanner.nextLine();
+        System.out.print("Masukkan NIM: ");
+        String inputPassword = scanner.nextLine();
+
+        if (inputUsername.equals(getUsername()) && inputPassword.equals(getPassword())) {
+            displayInfo();
+        } else {
+            System.out.println("Login Mahasiswa gagal!");
+        }
     }
 
-    // Method untuk menampilkan informasi mahasiswa
+    @Override
     public void displayInfo() {
-        System.out.println("Login Berhasil!");
-        System.out.println("Nama: " + nama);
-        System.out.println("NIM: " + nim);
+        super.displayInfo();
+        System.out.println("Nama = " + getUsername());
+        System.out.println("Nim = " + getPassword());
     }
 }
