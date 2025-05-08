@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Admin admin = new Admin("Admin263", "password263");
-        Mahasiswa mahasiswa = new Mahasiswa("Marlove Salim", "202410370110263");
+        Mahasiswa mahasiswa = new Mahasiswa("Marlove Salim", "202410370110263", "202410370110263");
 
         System.out.println("Pilih login sebagai:");
         System.out.println("1. Admin");

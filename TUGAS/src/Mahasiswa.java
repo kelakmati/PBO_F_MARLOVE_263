@@ -2,8 +2,19 @@ import java.util.Scanner;
 
 // Kelas Mahasiswa untuk menyimpan data login mahasiswa
 public class Mahasiswa extends User {
-    public Mahasiswa (String username, String password) {
+    String Nim;
+
+    public Mahasiswa (String username, String password, String Nim) {
         super(username, password);
+        this.Nim = Nim;
+    }
+
+    public String getNim() {
+        return Nim;
+    }
+
+    public void setNim(String nim) {
+        Nim = nim;
     }
 
     @Override
